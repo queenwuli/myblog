@@ -1,0 +1,19 @@
+{
+  "name": "myblog",
+  "description": "",
+  "main": "",
+  "authors": [
+    "queenwuli <942534046@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/queenwuli/myblog",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/libs",
+    "test",
+    "tests"
+  ]
+}
