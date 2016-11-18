@@ -11,6 +11,24 @@
 <!--</html>-->
 <% include include/header.ejs%>
 <div class="container">
-  主页
+  <ul class="media-list">
+    <%
+    article.forEach(function(article){
+    %>
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%=article.title%></h4>
+        <p class="media-left"><%- article.content%></p>
+      </div>
+    </li>
+    <%
+    });
+    %>
+  </ul>
 </div>
 <% include include/footer.ejs%>

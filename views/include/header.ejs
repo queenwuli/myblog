@@ -25,11 +25,29 @@
         <!-- 放置其它的导航条 -->
         <div class="collapse navbar-collapse" id="menus">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/users/reg">注册</a></li>
-                <li><a href="/users/login">登录</a></li>
-                <li><a href="/article/add">发表文章</a></li>
-                <li><a href="/users/loginout">登出</a></li>
+                <% if(user)
+                {
+                    %>
+                    <li><a href="/article/add">发表文章</a></li>
+                    <li><a href="/users/loginout">退出登录</a></li>
+                <%
+                }else{
+
+                %>
+                <li class="active"><a href="/users/reg">用户注册</a></li>
+                <li><a href="/users/login">用户登录</a></li>
+                <%
+                }
+                %>
             </ul>
         </div>
     </div>
 </nav>
+<div class="container text-center">
+    <% if (success&&success.length>0) { %>
+    <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    <% if (error&&error.length>0) { %>
+    <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+</div>
